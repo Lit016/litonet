@@ -322,11 +322,11 @@ li {
 }
 .content {
   padding: 15px 50px;
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 210px);
 }
 .footer {
   padding: 15px;
-  height: 135px
+  height: 130px
 }
 .footer .logo {
   font-size: 1.25rem;
