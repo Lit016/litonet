@@ -91,8 +91,13 @@ custom_js: |
       const s = location.search
       const q = new URLSearchParams(s)
       if (s.includes("text=") == true) {
-        pre.value = q.get("text")
-        translate()
+        try {
+          pre.value = decodeURI(q.get("text"))
+          translate()
+          console.log("読み込み成功")
+        } catch (err) {
+          console.error("読み込み失敗、" + err)
+        }
       }
     })
   </script>
@@ -108,7 +113,7 @@ custom_js: |
   <button class="sqbtn" title="Copy text" id="copytext" onclick="copy('#copytext', pos.value)">
     <i class="fa-regular fa-copy"></i>
   </button>
-  <button class="sqbtn" title="Copy URL" id="copyurl" onclick="copy('#copyurl', `https://lit016.github.io/litonet/translator?text=${pre.value}`)">
+  <button class="sqbtn" title="Copy URL" id="copyurl" onclick="copy('#copyurl', `https://lit016.github.io/litonet/translator?text=${encodeURI(pre.value)}`)">
     <i class="fa-solid fa-link"></i>
   </button>
 </div>
