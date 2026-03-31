@@ -128,7 +128,7 @@ custom_js: |
   <span class="ex">that → さと</span><br>
   <span class="ex">those → ぞせ</span>
 </p>
-<p>
+<p class="nom">
   一部の記号やら何やらもなんとなく変換します。<br>
   <span class="ex">New job: fix Mr. Gluck's hazy TV, PDQ! → にゅー じょぶ: ふぃっくす みすたー・ぐるっくず はずぃー とゔ、ぷどく!</span>
 </p>
