@@ -7,10 +7,11 @@ translation = {
   /* 変なやつら */
   "augh": "aう", "ough": "oー",
   "ould": "uっど",
+  "our": "awar",
   /* 二重母音 */
   "ai": "ei",
   "ee": "iー", "eu": "uー",
-  "oa": "oー", "oo": "uー",
+  "oa": "oー", "oo": "uー", "ou": "uー",
   /* 二重子音 */
   "bb": "b", "dd": "d", "ff": "f", "gg": "g",
   "kk": "k", "ll": "l", "mm": "m", "nn": "n", "pp": "p",
