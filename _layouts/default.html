@@ -2,6 +2,10 @@
 <head>
   <title>{{ page.title }} - Litonet</title>
   <meta charset="utf-8">
+  {% if page.desc %}
+  <meta name="description" content="{{ page.desc }}">
+  {% endif %}
+  <meta name="og:image" content="./img/woah.png">
   <link rel="icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./source/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v7.1.0/css/all.css">
