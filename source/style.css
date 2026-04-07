@@ -71,6 +71,7 @@ a[target="_blank"]::after {
   content: "\f08e";
   font-weight: 900;
   margin-left: 6px;
+  margin-right: 3px;
 }
 a:hover {
   text-decoration: underline;
