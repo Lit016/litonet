@@ -16,7 +16,7 @@ custom_js: translator.js
   <button class="sqbtn" title="結果をコピー" id="copytext" onclick="copy(pos.value, '#copytext')">
     <i class="fa-regular fa-copy"></i>
   </button>
-  <button class="sqbtn" title="URLをコピー" id="copyurl" onclick="copy(location.origin + location.pathname + '?text=' + btoa(pre.value).replaceAll('=', ''), '#copyurl')">
+  <button class="sqbtn" title="URLをコピー" id="copyurl" onclick="copy(location.origin + location.pathname + '?text=' + base64.encode(pre.value), '#copyurl')">
     <i class="fa-solid fa-link"></i>
   </button>
 </div>

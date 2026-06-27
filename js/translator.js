@@ -75,27 +75,26 @@ translation = {
   "'": "", ", ": "、", ". ": "。",
   ",": "、", ".": "。",
 }
-const pre = get("#pre")
-const pos = get("#pos")
-pre.addEventListener("keyup", translate)
+const pre = get("#pre");
+const pos = get("#pos");
+pre.addEventListener("keyup", translate);
 function translate() {
-  let result = pre.value.toLowerCase()
+  let result = pre.value.toLowerCase();
   for (let i = 0; i != Object.keys(translation).length; i++) {
-    let tr = (typeof Object.entries(translation)[i][1] == "object") ? Object.entries(translation)[i][1][Math.floor(Math.random() * Object.entries(translation)[i][1].length)] : Object.entries(translation)[i][1]
-    result = result.replaceAll(Object.entries(translation)[i][0], tr)
+    result = result.replaceAll(Object.entries(translation)[i][0], Object.entries(translation)[i][1]);
   }
   pos.value = result
 }
 window.addEventListener("DOMContentLoaded", () => {
   const s = location.search
-  const q = new URLSearchParams(s)
+  const q = new URLSearchParams(s);
   if (s.includes("text=") == true) {
     try {
-      pre.value = atob(q.get("text"))
-      translate()
-      console.log("読み込み成功")
+      pre.value = base64.decode(q.get("text"));
+      translate();
+      console.log("読み込み成功");
     } catch (err) {
-      console.error("読み込み失敗、" + err)
+      console.error("読み込み失敗、" + err);
     }
   }
-})
+});

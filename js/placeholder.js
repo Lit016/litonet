@@ -154,7 +154,7 @@ function changeForm() {
   }
 }
 function showText() {
-  let res = texts[type].replaceAll("\n  ", "")
+  let res = texts[type].replaceAll("\n  ", "");
   let put = ""
   for (let i = 0; i != Object.keys(ph[type]).length; i++) {
     put = get("#" + Object.entries(ph[type])[i][0]).value
@@ -162,7 +162,7 @@ function showText() {
       put = Object.entries(ph[type])[i][1][1]
       get("#" + Object.entries(ph[type])[i][0]).value = put
     }
-    res = res.replaceAll("[" + Object.entries(ph[type])[i][0] + "]", put)
+    res = res.replaceAll("[" + Object.entries(ph[type])[i][0] + "]", put);
   }
   get("#result").textContent = res
 }
@@ -177,6 +177,6 @@ function resetForm() {
 get("#textType").addEventListener("change", () => {
   type = get("#textType").value
   changeForm()
-})
+});
 
-window.addEventListener("DOMContentLoaded", changeForm)
+window.addEventListener("DOMContentLoaded", changeForm);

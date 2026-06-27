@@ -16,7 +16,7 @@ function copy(text, id) {
       get(id).innerHTML = `<i class="fa-solid fa-check"></i>`
       setTimeout(() => {
         get(id).innerHTML = old
-      }, 500)
+      }, 500);
     }
     console.log("コピー成功")
   } catch (err) {
@@ -24,8 +24,17 @@ function copy(text, id) {
       get(id).innerHTML = `<i class="fa-solid fa-ban"></i>`
       setTimeout(() => {
         get(id).innerHTML = old
-      }, 500)
+      }, 500);
       console.error("コピー失敗、", err);
     }
+  }
+}
+
+base64 = {
+  encode: function (text) {
+    return btoa(encodeURIComponent(text)).replaceAll('=', '');
+  },
+  decode: function (base64) {
+    return decodeURIComponent(atob(base64));
   }
 }
